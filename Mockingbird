@@ -1,0 +1,20 @@
+use_bpm 90
+
+play :b4
+sleep 1
+play :g5
+sleep 1
+play :g5
+sleep 1
+play :c5
+sleep 1
+play :g5
+sleep 1
+play :fs5
+sleep 1
+play :fs5
+sleep 1
+
+play :fs5
+play :a4
+sleep 1.5
