@@ -18,3 +18,6 @@ sleep 1
 play :fs5
 play :a4
 sleep 1.5
+play :e5
+play :g4
+sleep 2
