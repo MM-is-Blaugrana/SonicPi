@@ -1,19 +1,24 @@
 # Mockingbird
 use_bpm 90
+use_synth :piano
+intro = "C:/Users/Mark_Mendoza-Gamarra/Documents/Audacity/Eminem - Mockingbird(Intro).wav"
 
+sample intro
+
+sleep 34
 # Measure 1
 play :b4
-sleep 1
+sleep 0.5
 play :g5
-sleep 1
+sleep 0.5
 play :g5
-sleep 1
+sleep 0.5
 play :c5
-sleep 1
+sleep 0.5
 play :g5
-sleep 1
+sleep 0.5
 play :fs5
-sleep 1
+sleep 0.5
 play :fs5
 sleep 1
 
@@ -21,8 +26,8 @@ sleep 1
 play :fs5
 play :a4
 sleep 1.5
-play :e5, sustain: 0.25
-play :g4, sustain: 0.25
+play :e5, sustain_level: 1
+play :g4, sustain_level: 1
 sleep 2
 play :e5
 play :g4
@@ -33,7 +38,7 @@ play :e5
 sleep 1
 play :e5
 sleep 0.5
-play :a4, sustain: 0.25
+play :a4, sustain_level: 1
 sleep 2
 play :a4
 sleep 0.5
@@ -42,9 +47,35 @@ sleep 0.5
 play :as4
 play :fs4
 sleep 1.5
-play :b4, sustain: 0.25
-play :g4, sustain: 0.25
-sleep 2
+play :b4, sustain_level: 1
+play :g4, sustain_level: 1
+sleep 1.5
+
+# Measure 5
 play :b4
+sleep 0.5
+play :g5
+sleep 0.5
+play :g5
+sleep 0.5
+play :g5
+sleep 0.25
+play :a5
+sleep 0.25
+play :g5
+sleep 0.5
+play :fs5
+sleep 0.5
+play :f5
+sleep 1
+
+# Measure 6
+play :fs5
+play :a4
+sleep 1.5
+play :e5, sustain_level: 1
+play :g4, sustain_level: 1
+sleep 2
+play :e5
 play :g4
 sleep 1.5
