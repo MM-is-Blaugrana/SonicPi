@@ -5,6 +5,10 @@ y = 1
 x = 1.5
 z = 2
 
+notes = [:a4, :b4, :b4, :g4, :g4, :e4]
+sleeps = [0.5, 0.25, 0.25, 0.25, 0.25, 2]
+i = 0
+
 define :measure_2_6 do
   play :fs5
   play :a4
@@ -18,14 +22,14 @@ define :measure_2_6 do
 end
 
 use_bpm 90
-use_synth :hollow
+use_synth :sine
 intro = "C:/Users/Mark_Mendoza-Gamarra/Documents/Audacity/Eminem - Mockingbird(Intro).wav"
 
 sample intro
 
 sleep 34
 
-live_loop :my_song do
+5.times do
   # Measure 1
   play :b4
   sleep l
@@ -84,3 +88,11 @@ live_loop :my_song do
   # Measure 6
   measure_2_6
 end
+
+# Measure 7
+6.times do
+  play notes[i]
+  sleep sleeps[i]
+  i = i + 1
+end
+i = 0
