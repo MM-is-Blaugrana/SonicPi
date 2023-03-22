@@ -1,0 +1,94 @@
+use_bpm 120
+use_synth :chiplead
+
+# Measure 1
+define :cage do |n1, n2|
+  play n1
+  play n2
+  sleep 0.5
+end
+
+2.times do
+  cage :a4, :a5
+end
+
+cage :c5, :c6
+
+cage :a4, :a5
+
+cage :d5, :d6
+
+cage :a4, :a5
+
+cage :e5, :e6
+
+cage :d5, :d6
+
+# Measure 2
+define :jason do |n1, n2|
+  play n1
+  play n2
+  sleep 0.5
+end
+
+2.times do
+  jason :c5, :c6
+end
+
+jason :e5, :e6
+
+jason :c5, :c6
+
+jason :g5, :g6
+
+jason :c4, :c5
+
+jason :e5, :e6
+
+jason :c4, :c5
+
+# Measure 3
+define :adam do |n1, n2|
+  play n1
+  play n2
+  sleep 0.5
+end
+
+2.times do
+  adam :g4, :g5
+end
+
+adam :b4, :b5
+
+adam :g4, :g5
+
+adam :c5, :c6
+
+adam :g4, :g5
+
+adam :d5, :d6
+
+adam :c5, :c6
+
+# Measure 4
+define :watson do |n1, n2|
+  play n1
+  play n2
+  sleep 0.5
+end
+
+2.times do
+  watson :f4, :f5
+end
+
+watson :a4, :a5
+
+watson :f4, :f5
+
+watson :c5, :c6
+
+watson :f4, :f5
+
+watson :c5, :c6
+
+watson :b4, :b5
