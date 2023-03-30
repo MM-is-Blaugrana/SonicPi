@@ -1,0 +1,82 @@
+#The Way I Am
+use_bpm 87
+
+# Measure 1
+play :a4
+sleep 0.25
+play :c5
+sleep 0.25
+play :e5
+sleep 0.5
+play :a4
+sleep 0.25
+play :c5
+sleep 0.25
+play :f5
+sleep 0.5
+play :gs4
+sleep 0.25
+play :b4
+sleep 0.25
+play :f5
+sleep 0.5
+play :b4
+sleep 0.25
+play :d5
+sleep 0.25
+
+# Measure 2
+play :d5
+sleep 0.25
+play :gs4
+sleep 0.25
+play :b4
+sleep 0.25
+play :d5
+sleep 0.5
+play :g4
+sleep 0.25
+play :b4
+sleep 0.25
+play :e5
+sleep 0.5
+play :a4
+sleep 0.25
+play :c5
+sleep 0.25
+play :e5
+sleep 0.5
+play :e4
+sleep 0.25
+play :a4
+sleep 0.25
+play :C5
+sleep 0.25
+
+# Measure 3
+play :c5
+sleep 0.25
+play :e4
+sleep 0.25
+play :a4
+sleep 0.25
+play :c5
+sleep 0.5
+play :e4
+sleep 0.25
+play :a4
+sleep 0.25
+play :d5
+sleep 0.5
+play :gs4
+sleep 0.25
+play :b4
+sleep 0.25
+play :d5
+sleep 0.5
+play :d4
+sleep 0.25
+play :g4
+sleep 0.25
+play :b4
+sleep 0.25
