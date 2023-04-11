@@ -1,82 +1,81 @@
 #The Way I Am
 use_bpm 87
+use_synth :sine
 
-# Measure 1
-play :a4
-sleep 0.25
-play :c5
-sleep 0.25
-play :e5
-sleep 0.5
-play :a4
-sleep 0.25
-play :c5
-sleep 0.25
-play :f5
-sleep 0.5
-play :gs4
-sleep 0.25
-play :b4
-sleep 0.25
-play :f5
-sleep 0.5
-play :b4
-sleep 0.25
-play :d5
-sleep 0.25
+4.times do
+  define :only_one do |n|
+    # Measure 1
+    play :a4
+    sleep 0.25
+    play :c5
+    sleep 0.25
+    play :e5
+    sleep 0.5
+    play :a4
+    sleep 0.25
+    play :c5
+    sleep 0.25
+    play :f5
+    sleep 0.5
+    play n
+    sleep 0.25
+    play :b4
+    sleep 0.25
+    play :f5
+    sleep 0.5
+    play :b4
+    sleep 0.25
+    play :d5
+    sleep 0.25
+  end
+  only_one :gs4
+  only_one :g4
+end
+
+sleep 30
+
+live_loop :sample1 do
+  sample :ambi_piano
+  sleep 1
+end
 
 # Measure 2
-play :d5
-sleep 0.25
-play :gs4
-sleep 0.25
-play :b4
-sleep 0.25
-play :d5
-sleep 0.5
-play :g4
-sleep 0.25
-play :b4
-sleep 0.25
-play :e5
-sleep 0.5
-play :a4
-sleep 0.25
-play :c5
-sleep 0.25
-play :e5
-sleep 0.5
-play :e4
-sleep 0.25
-play :a4
-sleep 0.25
-play :C5
-sleep 0.25
+2.times do
+  play :d5
+  sleep 0.25
+  play :gs4
+  sleep 0.25
+  play :b4
+  sleep 0.25
+  play :d5
+  sleep 0.5
+  play :g4
+  sleep 0.25
+  play :b4
+  sleep 0.25
+  play :e5
+  sleep 0.5
+  play :a4
+  sleep 0.25
+  play :c5
+  sleep 0.25
+  play :e5
+  sleep 0.5
+  play :e4
+  sleep 0.25
+  play :a4
+  sleep 0.25
+  play :C5
+  sleep 0.25
+end
 
 # Measure 3
-play :c5
-sleep 0.25
-play :e4
-sleep 0.25
-play :a4
-sleep 0.25
-play :c5
-sleep 0.5
-play :e4
-sleep 0.25
-play :a4
-sleep 0.25
-play :d5
-sleep 0.5
-play :gs4
-sleep 0.25
-play :b4
-sleep 0.25
-play :d5
-sleep 0.5
-play :d4
-sleep 0.25
-play :g4
-sleep 0.25
-play :b4
-sleep 0.25
+notes = [:c5, :e4, :a4, :c5, :e4, :a4, :d5, :gs4, :b4, :d5, :d4, :g4, :b4]
+sleeps = [0.25, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.25]
+i = 0
+
+13.times do
+  play notes[i]
+  sleep sleeps[i]
+  i = i + 1
+end
