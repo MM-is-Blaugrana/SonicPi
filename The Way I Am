@@ -2,8 +2,13 @@
 use_bpm 87
 use_synth :sine
 
+a = 0.5
+s = "C:/Users/Mark_Mendoza-Gamarra/Documents/Audacity/Sample #3 - Eminem.wav"
+
+sample (s), amp: a
+
 4.times do
-  define :only_one do |n|
+  define :only_one do |n1, n2|
     # Measure 1
     play :a4
     sleep 0.25
@@ -17,7 +22,7 @@ use_synth :sine
     sleep 0.25
     play :f5
     sleep 0.5
-    play n
+    play n1
     sleep 0.25
     play :b4
     sleep 0.25
@@ -25,22 +30,15 @@ use_synth :sine
     sleep 0.5
     play :b4
     sleep 0.25
-    play :d5
+    play n2
     sleep 0.25
   end
-  only_one :gs4
-  only_one :g4
-end
-
-sleep 30
-
-live_loop :sample1 do
-  sample :ambi_piano
-  sleep 1
+  only_one :gs4, :d5
+  only_one :g4, :f4
 end
 
 # Measure 2
-2.times do
+define :jake do
   play :d5
   sleep 0.25
   play :gs4
@@ -67,6 +65,18 @@ end
   sleep 0.25
   play :C5
   sleep 0.25
+end
+
+2.times do
+  jake
+end
+
+live_loop :doo do
+  4.times do
+    sample :drum_bass_soft
+    sleep 1
+  end
+  stop
 end
 
 # Measure 3
