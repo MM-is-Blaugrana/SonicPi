@@ -130,3 +130,12 @@ live_loop :smug do
     end
   end
 end
+
+sleep 4
+
+2.times do
+  sample :drum_heavy_kick
+  sleep 2
+  sample :bd_fat
+  sleep 2
+end
