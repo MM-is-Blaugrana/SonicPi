@@ -3,7 +3,7 @@ use_bpm 87
 use_synth :sine
 
 a = 0.5
-s = "C:/Users/Mark_Mendoza-Gamarra/Documents/Audacity/Sample #3 - Eminem.wav"
+s = "C:/Users/Mark_Mendoza-Gamarra/Documents/Audacity/Sample #4 - Eminem.wav"
 
 ted = [0.125, 0.25, 0.5, 1]
 t = 0
@@ -28,6 +28,8 @@ end
 sleep 4
 
 sample (s), amp: a
+
+sleep 5
 
 6.times do
   define :only_one do |n1, n2|
@@ -125,6 +127,7 @@ live_loop :smug do
       i = i + 1
     elsif i <= 13
       i = 0
+      
     end
   end
 end
