@@ -4,10 +4,7 @@ l = 0.5
 y = 1
 x = 1.5
 z = 2
-
-notes = [:a4, :b4, :b4, :g4, :g4, :e4]
-sleeps = [0.5, 0.25, 0.25, 0.25, 0.25, 2]
-i = 0
+a = 0.75
 
 define :measure_2_6 do
   play :fs5
@@ -25,71 +22,79 @@ use_bpm 90
 use_synth :sine
 intro = "C:/Users/Mark_Mendoza-Gamarra/Documents/Audacity/Eminem - Mockingbird(Intro).wav"
 
-sample intro
+sample intro, amp: a
 
 sleep 34
 
-5.times do
-  # Measure 1
-  play :b4
-  sleep l
-  play :g5
-  sleep l
-  play :g5
-  sleep l
-  play :c5
-  sleep l
-  play :g5
-  sleep l
-  play :fs5
-  sleep l
-  play :fs5
-  sleep y
-  
-  # Measure 2
-  measure_2_6
-  
-  # Measure 3
-  play :e5
-  sleep y
-  play :e5
-  sleep l
-  play :a4, sustain_level: 1
-  sleep z
-  play :a4
-  sleep l
-  
-  # Measure 4
-  play :as4
-  play :fs4
-  sleep x
-  play :b4, sustain_level: 1
-  play :g4, sustain_level: 1
-  sleep x
-  
-  # Measure 5
-  play :b4
-  sleep l
-  play :g5
-  sleep l
-  play :g5
-  sleep l
-  play :g5
-  sleep w
-  play :a5
-  sleep w
-  play :g5
-  sleep l
-  play :fs5
-  sleep l
-  play :f5
-  sleep y
-  
-  # Measure 6
-  measure_2_6
+2.times do
+  define :only_two do |n1, n2|
+    # Measure 1
+    play :b4
+    sleep l
+    play :g5
+    sleep l
+    play :g5
+    sleep l
+    play :c5
+    sleep l
+    play :g5
+    sleep l
+    play n1
+    sleep l
+    play n2
+    sleep y
+    
+    # Measure 2
+    measure_2_6
+    
+    # Measure 3
+    play :e5
+    sleep y
+    play :e5
+    sleep l
+    play :a4, sustain_level: 1
+    sleep z
+    play :a4
+    sleep l
+    
+    # Measure 4
+    play :as4
+    play :fs4
+    sleep x
+    play :b4, sustain_level: 1
+    play :g4, sustain_level: 1
+    sleep x
+    
+    # Measure 5
+    play :b4
+    sleep l
+    play :g5
+    sleep l
+    play :g5
+    sleep l
+    play :g5
+    sleep w
+    play :a5
+    sleep w
+    play :g5
+    sleep l
+    play n1
+    sleep l
+    play n2
+    sleep y
+    
+    # Measure 6
+    measure_2_6
+  end
+  only_two :fs5, :f5
+  only_two :fs5, :f5
 end
 
 # Measure 7
+notes = [:a4, :b4, :b4, :g4, :g4, :e4]
+sleeps = [0.5, 0.25, 0.25, 0.25, 0.25, 2]
+i = 0
+
 6.times do
   play notes[i]
   sleep sleeps[i]
