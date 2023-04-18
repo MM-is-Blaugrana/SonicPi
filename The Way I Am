@@ -120,14 +120,13 @@ times = [0.25, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.
 i = 0
 
 live_loop :smug do
-  13.times do
-    if i >= 0
+  12.times do
+    if i <= 12
       play notes[i]
       sleep times[i]
       i = i + 1
-    elsif i <= 13
-      i = 0
-      
+    else i >= 12
+      stop
     end
   end
 end
