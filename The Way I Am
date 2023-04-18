@@ -5,9 +5,31 @@ use_synth :sine
 a = 0.5
 s = "C:/Users/Mark_Mendoza-Gamarra/Documents/Audacity/Sample #3 - Eminem.wav"
 
-sample (s), amp: a
+ted = [0.125, 0.25, 0.5, 1]
+t = 0
 
 4.times do
+  sample :ambi_swoosh, sustain_level: 1, amp: ted[t]
+  sleep 1
+  sample :bd_fat, amp: ted[t]
+  sleep 0.5
+  t = t + 1
+end
+t = 0
+
+live_loop :foo do
+  8.times do
+    sample :drum_bass_soft
+    sleep 0.5
+  end
+  stop
+end
+
+sleep 4
+
+sample (s), amp: a
+
+6.times do
   define :only_one do |n1, n2|
     # Measure 1
     play :a4
@@ -67,25 +89,42 @@ define :jake do
   sleep 0.25
 end
 
-2.times do
+4.times do
   jake
 end
 
 live_loop :doo do
-  4.times do
+  5.times do
     sample :drum_bass_soft
     sleep 1
   end
   stop
 end
 
+sleep 4
+
+live_loop :dwight do
+  5.times do
+    sample :drum_bass_soft
+    sleep 1
+    o = o + 1
+  end
+  stop
+end
+
 # Measure 3
 notes = [:c5, :e4, :a4, :c5, :e4, :a4, :d5, :gs4, :b4, :d5, :d4, :g4, :b4]
-sleeps = [0.25, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.25]
+times = [0.25, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 0.25, 0.25]
 i = 0
 
-13.times do
-  play notes[i]
-  sleep sleeps[i]
-  i = i + 1
+live_loop :smug do
+  13.times do
+    if i >= 0
+      play notes[i]
+      sleep times[i]
+      i = i + 1
+    elsif i <= 13
+      i = 0
+    end
+  end
 end
