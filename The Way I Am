@@ -137,5 +137,5 @@ sleep 4
   sample :drum_heavy_kick
   sleep 2
   sample :bd_fat
-  sleep 2
+  sleep 1
 end
