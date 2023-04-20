@@ -26,6 +26,14 @@ sample intro, amp: a
 
 sleep 34
 
+live_loop :key do
+  4.times do
+    sample :bd_fat
+    sleep 1
+  end
+  stop
+end
+
 2.times do
   define :only_two do |n1, n2|
     # Measure 1
@@ -94,6 +102,12 @@ end
 notes = [:a4, :b4, :b4, :g4, :g4, :e4]
 sleeps = [0.5, 0.25, 0.25, 0.25, 0.25, 2]
 i = 0
+
+2.times do
+  sample :vinyl_backspin
+  sample :bd_fat
+  sleep 2
+end
 
 6.times do
   play notes[i]
