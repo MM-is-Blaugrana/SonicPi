@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Color_Change : MonoBehaviour
+{
+    // Start is called before the first frame update
+    Color ChangeColor()
+    {
+        return new Color(
+            r: UnityEngine.Random.Range(0f, 1f),
+            g: UnityEngine.Random.Range(0f, 1f),
+            b: UnityEngine.Random.Range(0f, 1f));
+    }
+
+    // Update is called once per frame
+    private void OnCollisionEnter(Collision collision)
+    {
+        GetComponent<MeshRenderer>().material.color = ChangeColor();
+    }
+}
